@@ -1,5 +1,6 @@
 // from https://github.com/GoogleCloudPlatform/golang-samples/blob/main/bigtable/helloworld/main.go
 // my instance - https://console.cloud.google.com/bigtable/instances?project=modern-unison-305820
+// ./bigtable -project="selam-project-id" -instance="test-instance"
 package main
 
 import (
