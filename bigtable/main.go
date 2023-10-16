@@ -106,6 +106,7 @@ func main() {
 	}
 
 	log.Println("Reading a single greeting by row key")
+
 	//the filter - include only rows that have the specific columns in them
 	row, err := table.ReadRow(ctx, rowKeys[0], bigtable.RowFilter(bigtable.ColumnFilter(columnName)))
 	if err != nil {
@@ -115,7 +116,8 @@ func main() {
 	log.Printf("\t%s = %s\n", rowKeys[0], string(row[columnFamilyName][0].Value))
 
 	log.Println("Reading all greeting")
-	//we want all rows and all the rows start with "greeting"
+
+	//we want all prefixed with "greeting"
 	table.ReadRows(ctx, bigtable.PrefixRange(columnName), func(row bigtable.Row) bool {
 		item := row[columnFamilyName][0]
 		log.Printf("\t%s = %s\n", item.Row, item.Value)
