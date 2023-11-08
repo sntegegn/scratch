@@ -1,0 +1,6 @@
+Restructured a Python-based monolith system into scale-able and 
+reliable Go-based microservices on Kubernetes. Crafted meticulously 
+defined services with clear responsibilities and conducted comprehensive 
+load testing to optimize resource allocation. The restructuring enhanced scalability 
+and system reliability while significantly reducing infrastructure costs through the 
+implementation of asynchronous message processing. 
